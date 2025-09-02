@@ -31,30 +31,10 @@ header {
   background: rgba(0, 0, 0, 0.5); /* Keeps the center dark and readable */
   overflow: hidden;
   z-index: 1;
-}
-
-/* Add image to left and right sides using pseudo-elements */
-header::before,
-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 25%; /* Adjust width as needed */
-  height: 100%;
   background-image: url(https://www.keralatourism.org/images/pookkalam/2023/Pookalam1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  z-index: 0;
 }
 
-header::before {
-  left: 0;
-}
-
-header::after {
-  right: 0;
-}
 
 header h1 {
   font-size: 4rem; /* Bigger and bolder for a strong title presence */
