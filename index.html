@@ -65,7 +65,7 @@ header h1 {
     -1px -1px 0 #070600,
      1px -1px 0 #1b1700,
     -1px  1px 0 #050400,
-     1px  1px 0 #FFD700; /* Yellow outline effect */
+     1px  1px 0 #000000; /* Yellow outline effect */
   letter-spacing: 1.5px;
 }
 
@@ -79,7 +79,40 @@ header p {
      1px  1px 0 #000000; /* Orange-yellow outline for warmth */
 }
 
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.5rem;
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker for better readability on small screens */
+    background-image: url(https://www.keralatourism.org/images/pookkalam/2023/Pookalam1.png);
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
 
+  /* Hide the side images on small screens to save space */
+  header::before,
+  header::after {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    font-size: 1rem; /* Smaller paragraph text */
+  }
+
+  header img {
+    width: 80px; /* Adjust image size for mobile */
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+}
 
 section {
   padding: 3rem 1rem;
