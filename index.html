@@ -9,6 +9,7 @@
   <p>Create a digital pookalam using code and win exciting prizes!</p>
   </header>
   <title>Code a Pookalam | Tinkerhub NSSCE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -24,20 +25,61 @@ header img {
   border-radius: 50%; 
 }
 header {
+  position: relative;
   text-align: center;
   padding: 2rem 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Keeps the center dark and readable */
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Add image to left and right sides using pseudo-elements */
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 25%; /* Adjust width as needed */
+  height: 100%;
+  background-image: url(https://www.keralatourism.org/images/pookkalam/2023/Pookalam1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+header::before {
+  left: 0;
+}
+
+header::after {
+  right: 0;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 4rem; /* Bigger and bolder for a strong title presence */
+  margin-bottom: 1rem;
+  font-family: 'Great Vibes', cursive;
+  color: #ffd000; /* White text */
+  text-shadow:
+    -1px -1px 0 #070600,
+     1px -1px 0 #1b1700,
+    -1px  1px 0 #050400,
+     1px  1px 0 #FFD700; /* Yellow outline effect */
+  letter-spacing: 1.5px;
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #fce38a;
+  font-size: 1.4rem;
+  color: #ffffff; /* White text */
+  text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000; /* Orange-yellow outline for warmth */
 }
+
+
 
 section {
   padding: 3rem 1rem;
