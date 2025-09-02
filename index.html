@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code a Pookalam | Tinkerhub NSSCE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background: linear-gradient(135deg, #f8cdda, #1d2b64);
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #fce38a;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #ffdd59;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "✔ ";
+  color: #ffdd59;
+}
+
+.examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.example-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.example-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Simple animation */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Code a Pookalam</h1>
+    <p>Organized by Tinkerhub NSSCE</p>
+    <p>Create a digital pookalam using code and win exciting prizes!</p>
+  </header>  <section id="guidelines" data-animate>
+    <h2>Guidelines</h2>
+    <div class="card">
+      <ul>
+        <li>Use any programming language of your choice.</li>
+        <li>Your code should generate a pookalam pattern.</li>
+        <li>Creativity and uniqueness will be given priority.</li>
+        <li>Submit your code along with a screenshot of the output.</li>
+        <li>Ensure originality – plagiarism will lead to disqualification.</li>
+      </ul>
+    </div>
+  </section>  <section id="steps" data-animate>
+    <h2>Steps to Participate</h2>
+    <div class="card">
+      <ol>
+        <li>Register for the competition.</li>
+        <li>Choose your favorite programming language.</li>
+        <li>Write code to generate a pookalam design.</li>
+        <li>Take a screenshot of your pookalam.</li>
+        <li>Submit your code and screenshot before the deadline.</li>
+      </ol>
+    </div>
+  </section>  <section id="examples" data-animate>
+    <h2>Examples</h2>
+    <div class="examples">
+      <div class="example-card">
+        <h3>Python (Turtle)</h3>
+        <p>Create colorful patterns using the Turtle library.</p>
+      </div>
+      <div class="example-card">
+        <h3>JavaScript (Canvas)</h3>
+        <p>Draw geometric rangoli-like shapes with Canvas API.</p>
+      </div>
+      <div class="example-card">
+        <h3>C / C++</h3>
+        <p>Generate ASCII art style pookalam designs.</p>
+      </div>
+    </div>
+  </section>  <footer>
+    <p>© 2025 Tinkerhub NSSCE | All Rights Reserved</p>
+  </footer>  <script>
+    // Scroll animation
+    const elements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    elements.forEach(el => observer.observe(el));
+  </script></body>
+</html>
